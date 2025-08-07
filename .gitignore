@@ -1,0 +1,26 @@
+# ROS 2 colcon build artifacts
+build/
+install/
+log/
+
+# Python cache (por si usas scripts)
+__pycache__/
+*.pyc
+
+# VSCode settings (opcional)
+.vscode/
+
+# Archivos temporales
+*.swp
+*.swo
+*.bak
+*~
+
+# Archivos generados por colcon
+*.log
+*.pyc
+*.pyo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
