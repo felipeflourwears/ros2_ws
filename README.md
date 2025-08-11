@@ -49,6 +49,16 @@ flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-selec
 
 ```
 
+### C++
+
+```bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ cd src/
+flourwears@flourwears:~/Documentos/Github/ros2_ws/src$ ros2 pkg create my_cpp_pkg --build-type ament_cmake --dependencies rclcpp
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-select my_py_pkg
+
+```
+
 
 # Quick Start for ROS2 Package
 
