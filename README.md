@@ -49,6 +49,12 @@ flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-selec
 
 ```
 
+### Run Python Package
+```bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ source install/setup.bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ ros2 run my_py_pkg py_node_lf 
+
+```
 ### C++
 
 ```bash
@@ -59,6 +65,12 @@ flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-selec
 
 ```
 
+### Run C++ Package
+```bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ source install/setup.bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ ros2 run my_cpp_pkg cpp_node_lf 
+
+```
 
 # Quick Start for ROS2 Package
 
@@ -81,4 +93,21 @@ Or just put into .bashrc global
 ### 4. Run your node
 ```bash
 ros2 run <package_name> <node_name>
+```
+
+# Compile again
+
+### 1. Go to your workspace
+```bash
+cd ~/ros2_ws
+```
+
+### 2. Delete these folders
+```bash
+sudo rm -rf build install log
+```
+
+### 3. Build your packages
+```bash
+colcon build
 ```
