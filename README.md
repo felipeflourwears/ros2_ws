@@ -49,6 +49,11 @@ flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-selec
 
 ```
 
+### Without build always you can use(optional for debugging quickly)
+```bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ colcon build --packages-select my_py_pkg --symlink-install
+```
+
 ### Run Python Package
 ```bash
 flourwears@flourwears:~/Documentos/Github/ros2_ws$ source install/setup.bash
@@ -110,4 +115,12 @@ sudo rm -rf build install log
 ### 3. Build your packages
 ```bash
 colcon build
+```
+
+## Rename a Node
+```bash
+flourwears@flourwears:~/Documentos/Github/ros2_ws$ ros2 run my_py_pkg py_node_lf --ros-args -r __node:=sensorRename
+[INFO] [1755281930.683918515] [sensorRename]: Hello world
+[INFO] [1755281931.685696451] [sensorRename]: Hello 0
+[INFO] [1755281932.685636674] [sensorRename]: Hello 1
 ```

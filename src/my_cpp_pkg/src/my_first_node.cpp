@@ -1,7 +1,16 @@
 #include "rclcpp/rclcpp.hpp"
-using namespace std::chrono_literals;
 
-class MyNode : public rclcpp::Node
+using rclcpp::init;
+using rclcpp::spin;
+using rclcpp::shutdown;
+using rclcpp::TimerBase;
+using rclcpp::Node;
+
+
+
+using namespace std::chrono_literals; // Para usar 1s, 500ms, etc.
+
+class MyNode : public Node
 {
     public:
         MyNode() : Node("cpp_hello_world_node"), counter_(0)
@@ -15,15 +24,15 @@ class MyNode : public rclcpp::Node
             RCLCPP_INFO(this->get_logger(), "Hello %d", counter_);
             counter_++;
         } 
-        rclcpp::TimerBase::SharedPtr timer_;
+        TimerBase::SharedPtr timer_;
         int counter_;
 };
 
 int main(int argc, char **argv){
-    rclcpp::init(argc, argv);
+    init(argc, argv);
     //Create a pointer Object RCL CPP
     auto node = std::make_shared<MyNode>();
-    rclcpp::spin(node);
-    rclcpp::shutdown();
+    spin(node);
+    shutdown();
     return 0;
 }
