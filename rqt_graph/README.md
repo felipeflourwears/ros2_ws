@@ -5,4 +5,4 @@ In this section, we can obtain an overall graphical view and detect issues more 
 rqt_graph
 ```
 
-<img src="rqt_graph.png" alt="rqt_graph" width="600">
+<img src="rqt_graph.png" alt="rqt_graph" width="900">

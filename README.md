@@ -124,3 +124,46 @@ flourwears@flourwears:~/Documentos/Github/ros2_ws$ ros2 run my_py_pkg py_node_lf
 [INFO] [1755281931.685696451] [sensorRename]: Hello 0
 [INFO] [1755281932.685636674] [sensorRename]: Hello 1
 ```
+
+## To see the nodes, topics or info
+```bash
+flourwears@flourwears:~$ ros2 node list
+/robots_news_station_node
+
+flourwears@flourwears:~$ ros2 topic list
+/parameter_events
+/robots_news
+/rosout
+
+flourwears@flourwears:~$ ros2 topic info /robots_news
+Type: example_interfaces/msg/String
+Publisher count: 1
+Subscription count: 0
+flourwears@flourwears:~$ 
+
+flourwears@flourwears:~$ ros2 node info /robots_news_station_node 
+/robots_news_station_node
+  Subscribers:
+
+  Publishers:
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /robots_news: example_interfaces/msg/String
+    /rosout: rcl_interfaces/msg/Log
+  Service Servers:
+    /robots_news_station_node/describe_parameters: rcl_interfaces/srv/DescribeParameters
+    /robots_news_station_node/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
+    /robots_news_station_node/get_parameters: rcl_interfaces/srv/GetParameters
+    /robots_news_station_node/get_type_description: type_description_interfaces/srv/GetTypeDescription
+    /robots_news_station_node/list_parameters: rcl_interfaces/srv/ListParameters
+    /robots_news_station_node/set_parameters: rcl_interfaces/srv/SetParameters
+    /robots_news_station_node/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
+  Service Clients:
+
+  Action Servers:
+
+  Action Clients:
+
+flourwears@flourwears:~$ ros2 topic echo
+
+
+```
