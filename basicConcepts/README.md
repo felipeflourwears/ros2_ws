@@ -4,50 +4,15 @@ Este documento explica los conceptos fundamentales de ROS 2 y cómo se relaciona
 
 ## Tabla de conceptos
 
-    <table>
-        <tr>
-            <th>Concepto</th>
-            <th>Qué es / Función</th>
-            <th>Cómo se usa / Comunicación</th>
-            <th>Ejemplo práctico</th>
-        </tr>
-        <tr>
-            <td><strong>Nodo</strong></td>
-            <td>Unidad básica de ejecución en ROS 2. Es un programa que hace algo, puede publicar o suscribirse a datos.</td>
-            <td>Cada nodo corre de manera independiente y puede comunicarse con otros nodos.</td>
-            <td>Un nodo que lee la cámara o un sensor de temperatura.</td>
-        </tr>
-        <tr>
-            <td><strong>Topic</strong></td>
-            <td>Canal de comunicación para <strong>envío de datos asíncrono</strong> entre nodos.</td>
-            <td>Un nodo <strong>publica</strong> mensajes a un topic; otros nodos <strong>se suscriben</strong> a ese topic.</td>
-            <td>Nodo A publica la posición del robot; nodo B recibe esa posición para mover un brazo.</td>
-        </tr>
-        <tr>
-            <td><strong>Service</strong></td>
-            <td>Comunicación <strong>sincrónica</strong> que sigue el patrón <strong>request/response</strong> (petición/respuesta).</td>
-            <td>Un nodo hace un request a otro nodo que ofrece un service y espera la respuesta.</td>
-            <td>Nodo A pide al nodo B que haga un cálculo de trayectoria y espera el resultado.</td>
-        </tr>
-        <tr>
-            <td><strong>Action</strong></td>
-            <td>Similar a un service, pero permite <strong>progreso continuo</strong> y cancelación de tareas largas.</td>
-            <td>Nodo A inicia una acción en nodo B, recibe feedback y resultado final.</td>
-            <td>Mover un robot a un punto lejano con actualizaciones de progreso.</td>
-        </tr>
-        <tr>
-            <td><strong>Parameter</strong></td>
-            <td>Configuración o valor que un nodo puede <strong>leer o cambiar en tiempo de ejecución</strong>.</td>
-            <td>Se definen al iniciar el nodo o se modifican mientras corre.</td>
-            <td>Velocidad máxima de un motor que se puede ajustar sin reiniciar el nodo.</td>
-        </tr>
-        <tr>
-            <td><strong>Mensaje</strong></td>
-            <td>Estructura de datos que se envía a través de topics o services.</td>
-            <td>Define qué información se puede enviar y cómo.</td>
-            <td>Un mensaje de posición tiene <code>x, y, z</code>.</td>
-        </tr>
-    </table>
+| Concepto  | Qué es / Función | Cómo se usa / Comunicación | Ejemplo práctico |
+|-----------|-----------------|---------------------------|-----------------|
+| **Nodo** | Unidad básica de ejecución en ROS 2. Es un programa que hace algo, puede publicar o suscribirse a datos. | Cada nodo corre de manera independiente y puede comunicarse con otros nodos. | Un nodo que lee la cámara o un sensor de temperatura. |
+| **Topic** | Canal de comunicación para **envío de datos asíncrono** entre nodos. | Un nodo **publica** mensajes a un topic; otros nodos **se suscriben** a ese topic. | Nodo A publica la posición del robot; nodo B recibe esa posición para mover un brazo. |
+| **Service** | Comunicación **sincrónica** que sigue el patrón **request/response** (petición/respuesta). | Un nodo hace un request a otro nodo que ofrece un service y espera la respuesta. | Nodo A pide al nodo B que haga un cálculo de trayectoria y espera el resultado. |
+| **Action** | Similar a un service, pero permite **progreso continuo** y cancelación de tareas largas. | Nodo A inicia una acción en nodo B, recibe feedback y resultado final. | Mover un robot a un punto lejano con actualizaciones de progreso. |
+| **Parameter** | Configuración o valor que un nodo puede **leer o cambiar en tiempo de ejecución**. | Se definen al iniciar el nodo o se modifican mientras corre. | Velocidad máxima de un motor que se puede ajustar sin reiniciar el nodo. |
+| **Mensaje** | Estructura de datos que se envía a través de topics o services. | Define qué información se puede enviar y cómo. | Un mensaje de posición tiene `x, y, z`. |
+
     
 ## Diferencias clave resumidas
 
